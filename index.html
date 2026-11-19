@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#070d19">
+<title>Six Smooth UI Details — Motion Lab</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="ambient"></div>
+<main class="shell">
+  <header class="topbar"><a class="wordmark" href="#"><span class="mark">✳</span> MOTION LAB</a><span class="top-meta">INTERACTION STUDY <i></i> 06 EXPERIMENTS</span></header>
+  <section class="hero"><div class="kicker"><span></span> MICRO-INTERACTIONS / 001—006</div><h1>More smooth details,<br><em>in slow-mo.</em></h1><p>Six tiny motion decisions that make an interface feel considered. Choose a scene, then replay the interaction.</p></section>
+  <nav class="tabs" aria-label="Motion examples">
+    <button class="tab active" data-target="arc"><b>01</b> Show where it went</button>
+    <button class="tab" data-target="morph"><b>02</b> Morph, don't swap</button>
+    <button class="tab" data-target="cascade"><b>03</b> Cascade, don't dump</button>
+    <button class="tab" data-target="fling"><b>04</b> Follow, then fling</button>
+    <button class="tab" data-target="flip"><b>05</b> Flip with depth</button>
+    <button class="tab" data-target="swing"><b>06</b> Swing, then settle</button>
+  </nav>
+  <section class="lab">
+    <div class="stage-head"><div><div class="eyebrow" id="sceneNumber">01 / ARC TO CART</div><h2 id="sceneTitle">Show where it went.</h2><p id="sceneDesc">The item travels along a curved path into the cart. A small badge confirms the result.</p></div><div class="status"><span></span> INTERACTIVE</div></div>
+    <div class="demo-stage" id="stage">
+      <div class="stage-grid"></div>
+      <section class="scene scene-arc active" data-scene="arc">
+        <div class="shop-card">
+          <div class="product-orb"><span></span></div><div class="product-copy"><b>Solar object</b><small>Warm light · 01</small></div>
+          <button class="small-action" id="addCart">Add to cart <span>+</span></button>
+        </div>
+        <div class="cart-target" id="cartTarget"><span class="cart-icon">🛒</span><span class="cart-label">YOUR CART</span><b class="cart-count" id="cartCount">0</b></div>
+        <svg class="flight-path" viewBox="0 0 500 220" preserveAspectRatio="none"><path d="M80 40 C180 -35 300 5 410 125" /></svg>
+        <div class="fly-dot" id="flyDot"></div>
+        <div class="metric-chip">ARC · 500 ms · BADGE +1</div>
+      </section>
+      <section class="scene scene-morph" data-scene="morph">
+        <button class="send-button" id="sendButton">Send <span class="send-spinner"></span></button>
+        <div class="morph-state" id="morphState"><span class="loader"></span><b>Sending</b></div>
+        <div class="metric-chip">260 × 64 px · 270 ms</div>
+      </section>
+      <section class="scene scene-cascade" data-scene="cascade">
+        <div class="list-card"><div class="list-title">LATEST UPDATES <span>4 NEW</span></div>
+          <div class="cascade-row"><i class="dot blue"></i><span><b>New message</b><small>Alex sent you a note</small></span><time>now</time></div>
+          <div class="cascade-row"><i class="dot yellow"></i><span><b>Payment received</b><small>Your invoice was paid</small></span><time>2m</time></div>
+          <div class="cascade-row"><i class="dot pink"></i><span><b>Project update</b><small>A task was completed</small></span><time>8m</time></div>
+          <div class="cascade-row"><i class="dot green"></i><span><b>New follower</b><small>Jamie followed you</small></span><time>1h</time></div>
+        </div>
+        <div class="metric-chip">4 ROWS · 70 ms APART</div>
+      </section>
+      <section class="scene scene-fling" data-scene="fling">
+        <div class="fling-card" id="flingCard"><div class="fling-image"><span class="mini-tag">NEW</span></div><div class="fling-lines"><i></i><i></i></div><span class="fling-check">✓</span></div>
+        <div class="fling-hint">TAP TO FOLLOW THE CARD</div>
+        <div class="metric-chip">TILTS 12° · FLICKS OFF</div>
+      </section>
+      <section class="scene scene-flip" data-scene="flip">
+        <div class="flip-wrap" id="flipWrap"><div class="flip-inner" id="flipInner"><div class="flip-face flip-front"><small>SPANISH</small><b>Hola</b><span>Tap to reveal</span></div><div class="flip-face flip-back"><small>ENGLISH</small><b>Hello</b><span>Translation</span></div></div></div>
+        <div class="metric-chip">180° · LIFTS 8% MID-FLIP</div>
+      </section>
+      <section class="scene scene-swing" data-scene="swing">
+        <button class="bell-button" id="bellButton" aria-label="Animate notification bell"><span class="bell">♟</span><i class="bell-clapper"></i><b class="notification-count">3</b></button>
+        <div class="bell-caption">NEW NOTIFICATIONS</div>
+        <div class="metric-chip">±24° · SETTLES IN 760 ms</div>
+      </section>
+    </div>
+    <div class="stage-footer"><span id="hint">Click “Add to cart” to watch the item travel.</span><button class="replay" id="replay"><span>↻</span> Replay animation</button></div>
+  </section>
+  <section class="principle"><div class="eyebrow">THE PRINCIPLE</div><h2>Motion should explain,<br><em>not decorate.</em></h2><p>Use movement to preserve context, communicate state, reveal hierarchy and make feedback feel immediate.</p></section>
+  <footer><span>MICRO-INTERACTION STUDY / SIX DETAILS</span><span>HTML · CSS · JAVASCRIPT</span></footer>
+</main>
+<script src="app.js"></script>
+</body></html>
